@@ -24,8 +24,8 @@ export default class Ci extends Command {
 
     const name = flags.name || 'world'
     const data = await getWorkflowsAndJobs("47243bde-b92c-4aab-8524-a5f5869e8cdd")
-    console.log(data)
 
+    this.log(data)
     this.log(`hello ${name} from ./src/commands/hello.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
